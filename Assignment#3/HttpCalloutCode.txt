@@ -1,0 +1,7 @@
+//First create the remote site setting then execute below code in the developer console. 
+HttpRequest req = new HttpRequest();
+req.setEndpoint('https://postman-echo.com/get?foo1=bar1&foo2=bar2');
+req.setMethod('GET');
+Http http = new Http();
+HTTPResponse resp = http.send(req);
+system.debug(resp.getBody());
